@@ -106,7 +106,7 @@ Using network 'ganachecli'.
   * Open with Google Chrome
 
   ## Remote
-  * 
+  * https://git.heroku.com/agile-lowlands-23166.git
 
   NOTES:
 
