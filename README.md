@@ -10,7 +10,7 @@
 - Visual Studio Code 1.24.1
 
 ## Download Repository
-* $ git clone https://github.com/paul-darbyshire/pre.ico.git
+* $ git clone https://github.com/paul-darbyshire/medici.pre.ico.git
 * $ cd <name>
 * $ npm install
 * $ truffle compile
