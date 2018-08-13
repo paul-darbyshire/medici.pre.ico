@@ -108,11 +108,13 @@ Using network 'ganachecli'.
   ## Remote
   * https://agile-lowlands-23166.herokuapp.com
 
-  NOTES:
+-------------------------
+  FURTHER NOTES:
 
   1. The Test Platform is only designed to be run on a desktop PC and not setup to be reposnsive on other media e.g., smartphone, tablet, etc.
   2. The Test Platform allows you to set and read various parameters within the smart contract as well as send ETH to the contract address.
-  3. To send ETH to the contract address you must have an Ethereum browser client e.g. Metamask. 
+  3. To send ETH to the contract address you must have an Ethereum browser client e.g. Metamask for Chrome or Firefox:
+  https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en
   4. Although the website is not designed to be repsonsive to smartphone display, it is possible to send ETH to the contract address using a mobile Ethereum client e.g. Metamask mobile.
   5. Click CTRL + I to open the Console window and see the Ethereum Ropsten network being polled for the latest transactions to the contract address.
 
