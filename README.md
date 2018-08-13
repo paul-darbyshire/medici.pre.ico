@@ -11,7 +11,7 @@
 
 ## Download Repository
 * $ git clone https://github.com/paul-darbyshire/medici.pre.ico.git
-* $ cd <name>
+* $ cd medici.pre.ico
 * $ npm install
 * $ truffle compile
 
