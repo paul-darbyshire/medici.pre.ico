@@ -1,0 +1,11 @@
+build
+cloud
+flat
+ganache
+node_modules
+notes
+media
+tmp
+truffle
+.env
+

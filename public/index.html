@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Test Platform</title>
+</head>
+<body>
+    <div class="navigation-bar">
+        <div id="navigation-container">
+        <!--<img class="logo" src="media/medici_logo.png">-->
+            <ul>
+                <li><a href="#tokenSale">SALE</a></li>
+                <li><a href="#details">DETAILS</a></li>
+                <li><a href="#tandc">T&amp;C</a></li>
+                <li><a href="#testAccounts">ACCTS.</a></li>
+                <li><a href="#testTrxs">TRXS</a></li>
+                <li><a href="#testBlcks">BLCKS</a></li>
+                <li><a href="#methods">METHODS</a></li>
+            </ul>
+        </div>
+        <div class="websites">
+            <li><a href="https://ethstats.net/">Ethereum Stats</a></li>
+            <li><a href="https://ropsten.etherscan.io/">Etherscan</a></li>
+            <li><a href="https://etherchain.org/">Ether Chain</a></li>
+            <li><a href="https://tokenmarket.net/ethereum-address-validator">Addr. Valid.</a></li>
+            <li><a href="https://ethgasstation.info/">Gas Station</a></li>
+            <li><a href="https://etherscan.io/ether-mining-calculator/">Mining Calc.</a></li>
+            <li><a href="https://www.epochconverter.com/">Epoch Converter</a></li>
+        </div>
+    </div>
+    <div class="ethereum-client"> 
+        <ol>
+            <li id='platform'></li>
+            <li id='network'></li>
+        </ol>
+    </div>
+    <div class='prices'>
+        <ol>
+            <li id='ETH'></li>
+            <li id='BTC'></li>
+            <li id='GBP'></li>
+        </ol>
+    </div>
+    <div id="home">
+        <a name="tokenSale"></a>
+        <div class="page-padding"></div>
+        <h1>Pre-ICO Token Sale</h1>
+        <span class='paused' id='isPaused'></span>
+        <span class='capr' id='capReached'></span>
+        <span class='hasc' id='hasClosed'></span>
+        <p>[Click address to copy]</p>
+        <p class="capr" id='capReached'></p>
+        <h2>Contract Address</h2>
+        <p class="caddr" onClick="copy(this)" id="contractAddress"></p>
+        <div id="currDiv">
+            <div>
+                <span id="totalETHRaised"></span>
+                <div class="mediumtext">ETH Raised</div>
+            </div>
+        </div>
+    </div> <!--END page 1-->
+        
+    <div id="page">
+        <a name="details"></a>
+            <div class="page-padding"></div>
+            <h1>Pre-ICO Details</h1>
+            <div class="ico-boxed">
+                <table class="table">
+                    <tr>
+                        <th>Start date</th>
+                        <th></th>
+                        <th>End date</th>
+                    </tr>
+                    <tr>
+                        <td id="startDate"></td>
+                        <td></td>
+                        <td id="endDate"></td>
+                    </tr>
+                    <tr>
+                        <th>Rate (+Pre-ICO bonus)</th>
+                        <th></th>
+                        <th>Soft cap</th>
+                    </tr>
+                    <tr>
+                        <td id="tokensPerETHWithBonus"></td>
+                        <td></td>
+                        <td>
+                            <span id="softCapUSD"></span> 
+                            <br> 
+                            <span id="softCapETH"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Currency</th>
+                        <th></th>
+                        <th>ETH Price</th>
+                    </tr>
+                    <tr>
+                        <td>ETH</td>
+                        <td></td>
+                        <td id="ETHPrice"></td>
+                    </tr>
+                    <tr>
+                        <th>MDI Price</th>
+                        <th></th>
+                        <th>Min. Purchase</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span id="MDIPriceUSD"></span> 
+                            <br> 
+                            <span id="MDIPriceETH"></span>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span id="minPurchaseUSD"></span> 
+                            <br> 
+                            <span id="minPurchaseETH"></span>
+                        </td>
+                    </tr>
+                </table>   
+            </div>   
+        </div> <!--END page 2-->
+        <div id="page">
+            <a name="tandc"></a>
+                <div class="page-padding"></div>
+                <h1>TERMS &amp; CONDITIONS</h1>
+            <div class="ico-boxed">
+                <ul>
+                    <li>To participate in Pre-ICO you will need an <b>Ethereum wallet</b> client in your browser e.g., Metamask.</li>
+                    <li>All purchasers will be accepted in <b>ETH</b> only.</li>
+                    <li>If you have an alternative cryptocurrency e.g., BTC or fiat currency e.g., GBP, you will need to convert these to ETH using a reputable exchange e.g., coinbase and transfer the ETH to your Ethereum wallet.</li>
+                    <li>Prices for ETH will be updated on the Pre-ICO webpage using a live feed from <b>www.cryptocompare.com</b>.</li>
+                    <li>All deposits received in ETH will be held in a corporate grade BitGo wallet with multi-signature authentication.</li>
+                    <li>To take part in the Pre-ICO you must send an amount of ETH to the <b>Crowdsale Address</b> on this webpage.</li>
+                    <li>After successfully sending ETH, you will be issued with a confirmation receipt by email notifying you of the amount of Medici Tokens you have purchased.</li>
+                    <li>All Medici Tokens purchased during the Pre-ICO will be transferred to your <b>Ethereum Wallet</b> during the Token Generation Event (TGE) later this year.</li>
+                </ul>
+            </div>     
+        </div>
+    </div> <!--END page 3-->
+    <div id="page">
+        <a name="testAccounts"></a>
+        <div class="page-padding"></div>
+        <h1>Accounts</h1>
+        <h2>Balance</h2>
+        <div class="boxed">
+            <p>
+                Get the balance in <b>ETH</b> of an <b>Ethereum Wallet</b>. 
+            </p>
+        </div>
+        <br>
+        <input class="tbxAccount" type="text" id="address" placeholder="e.g., 0xe5b44daa1f4bbb6dae3cb0698f20f89a16160c84">
+        <button class="btn" id="balance">ETH</button>
+    </div> <!--END page 4-->
+       
+    <div id="page">
+        <a name="testTrxs"></a> 
+        <div class="page-padding"></div>
+        <h1>TRANSACTION REQUESTS</h1>
+        <div class="boxed">
+            <p>
+                Request <b>Transaction Details</b> on the <b>Ethereum Blockchain</b> from <b>Etherscan.io</b> using the <b>Transaction Hash</b>.
+            </p>
+        </div>
+        <br>
+        <input class="tbxTrx" type="text" id="trxHash" placeholder=" e.g., 0x28582a771475bad08cd73bd43cc6a4112503a88c4bdeeec6577970b11e64703d">
+        <button class="btn" id='detTrxHash'>Go</button>
+    </div> <!--END page 5-->
+    <div id="page">
+        <a name="testBlcks"></a> 
+        <div class="page-padding"></div>
+        <h1>BLOCK REQUEST</h1>
+        <div class="boxed">
+            <p>
+                Request <b>Transaction Details</b> on the <b>Ethereum Blockchain</b> from <b>Etherscan.io</b> using the <b>Block Number</b>.
+            </p>
+        </div>
+        <br>
+        <input class="tbxEther" type="text" id='blckNum' placeholder=" e.g., 56472">
+        <button class="btn" id='detBlckNum'>Go</button>
+    </div> <!--END page 6-->
+
+    <div id="page">
+        <a name="methods"></a> 
+        <div class="page-padding"></div>
+        <h1>SMART CONTRACT METHODS</h1>
+        <div class="flex-container">
+            <div>
+                <div class="heading"><p>Setters</p></div>
+                    <input class="tbxSet" type="text" id="newClosingTime" placeholder=" e.g., 1532949676"> 
+                    <button class="btn" id='closingTime'>End Time</button><br>
+                    <input class="tbxSet" type="text" id="newBonus" placeholder=" e.g., 40">
+                    <button class="btn" id='bonus'>Bonus</button><br>
+                    <input class="tbxSet" type="text" id="newCap" placeholder=" e.g., 20">
+                    <button class="btn" id='cap'>Softcap</button><br>
+                    <input class="tbxSet" type="text" id="newETHMin" placeholder=" e.g., 1.5">
+                    <button class="btn" id='ethMin'>Min. ETH</button><br>
+                </div>
+            <div>
+            <div class="heading"><p>Getters</p></div>
+                <button class="btn" id="ETHRaised">ETH Raised</button>
+                </div> 
+            <div>
+                <div class="heading"><p>Methods</p></div>
+                    <div class="btn-group">
+                        <button class="btn" id='pause'>Pause</button>
+                        <button class="btn" id='unpause'>Unpause</button>
+                    </div>
+                </div>
+            <div>
+                <div class="heading"><p>Parameters</p></div>
+                    <button class="btn" id='psEpoch'>Start Time</button><br> 
+                    <button class="btn" id='peEpoch'>End Time</button><br> 
+                    <button class="btn" id='psDate'>Start Date</button><br> 
+                    <button class="btn" id='peDate'>End Date</button><br> 
+                    <button class="btn" id='pBonus'>Bonus</button><br>  
+                    <button class="btn" id='pCap'>Softcap</button><br> 
+                    <button class="btn" id='pETHMin'>Min. ETH</button><br> 
+                    <button class="btn" id='oAddr'>Owner</button><br>
+                </div>
+            </div>
+        </div> <!--END page 7-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/ethereum/web3.js/0.19.0/dist/web3.js"></script>
+    <script src="js/helpers/scroll.js"></script>
+    <script src="js/bundle.js"></script>
+    </body>
+</html>
