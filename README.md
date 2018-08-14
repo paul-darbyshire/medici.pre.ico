@@ -107,7 +107,7 @@ Using network 'ganachecli'.
   * Open with Google Chrome
 
   ## Remote
-  * https://agile-lowlands-23166.herokuapp.com
+* The Test Platform has been deployed to the Heroku testing platform. Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. The Test Platform is accessible at: https://agile-lowlands-23166.herokuapp.com.
 
 -------------------------
   FURTHER NOTES:
@@ -119,7 +119,7 @@ Using network 'ganachecli'.
   4. Although the website is not designed to be repsonsive to smartphone display, it is possible to send ETH to the contract address using a mobile Ethereum client e.g. Metamask mobile.
   5. Click CTRL + I to open the Console window and see the Ethereum Ropsten network being polled for the latest transactions to the contract address.
 
-  The majority of files relating to the Test Platform are found in the 'public/js' directory. Please note that some folders e.g., routes and test files e.g., users.js were only for testing purposes to check the connection to the Herku cloud platform. Our partner web developers will be responsible for taking these developments   further as well as implementing database backup and transferring the website to Amazon or our preferred cloud host for the Pre-ICO. 
+  The majority of files relating to the Test Platform are found in the 'public/js' directory. Please note that some folders e.g., routes and test files e.g., users.js were only for testing purposes to check the connection to the Heroku cloud platform. Our partner web developers will be responsible for taking these developments   further as well as implementing database backup and transferring the website to Amazon or our preferred cloud host for the Pre-ICO. 
 
   Sometimes it can take several minutes to process a transaction and it is usually necessary to input a gas limit for the transaction to complete successfully.
 
