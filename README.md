@@ -99,6 +99,7 @@ Using network 'ganachecli'.
   No issues found.
 
   ## Run Test Platform
+
   ## Local
 
   * Right click public/index.html
@@ -107,7 +108,8 @@ Using network 'ganachecli'.
   * Open with Google Chrome
 
   ## Remote
-* The Test Platform has been deployed to the Heroku testing platform. Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. The Test Platform is accessible at: https://agile-lowlands-23166.herokuapp.com.
+
+* Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. The Test Platform has been deployed at: https://agile-lowlands-23166.herokuapp.com.
 
 -------------------------
   FURTHER NOTES:
