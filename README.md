@@ -25,7 +25,8 @@
 * $ npm i -g ganache-cli
 * $ truffle test --network ganachecli
 
-## Method 3: Ganache-GUI: https://github.com/trufflesuite/ganache
+## Method 3: Ganache-GUI
+* Follow instructions here to install: https://github.com/trufflesuite/ganache
 * $ truffle test --network ganache
 
 NOTES: 
@@ -118,8 +119,8 @@ Using network 'ganachecli'.
   4. Although the website is not designed to be repsonsive to smartphone display, it is possible to send ETH to the contract address using a mobile Ethereum client e.g. Metamask mobile.
   5. Click CTRL + I to open the Console window and see the Ethereum Ropsten network being polled for the latest transactions to the contract address.
 
-  The majority of files relating to the Test Platform are found in the 'public/js' directory. 
-  Sometimes it can take several minutes to process a transaction and it is usually necessary to input
-  a gas limit for the transaction to complete successfully.
+  The majority of files relating to the Test Platform are found in the 'public/js' directory. Please note that some folders e.g., routes and test files e.g., users.js were only for testing purposes to check the connection to the Herku cloud platform. Our partner web developers will be responsible for taking these developments   further as well as implementing database backup and transferring the website to Amazon or our preferred cloud host for the Pre-ICO. 
+
+  Sometimes it can take several minutes to process a transaction and it is usually necessary to input a gas limit for the transaction to complete successfully.
 
   
