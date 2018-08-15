@@ -39,7 +39,7 @@ module.exports = function(deployer) {
     const wallet = web3.eth.accounts[1];
     const cap = ether(20);      /// e.g., 20 ETH
     const bonus = 40;           /// e.g., 40%
-    const ethMin = ether(1.5);  /// e.g., 1.75 ETH
+    const ethMin = ether(1);  /// e.g., 1 ETH
     
     deployer.deploy(Medici, 
         openingTime, 

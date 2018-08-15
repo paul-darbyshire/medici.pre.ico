@@ -46,38 +46,39 @@ Using network 'ganachecli'.
       ✓ should be correct owner address
       ✓ should be correct beneficiary address
     Intialising values
-      ✓ should fail with zero cap (73ms)
-      ✓ should fail with zero bonus (77ms)
-      ✓ should fail with zero min. ETH accepted (70ms)
+      ✓ should fail with zero cap (53ms)
+      ✓ should fail with zero bonus (74ms)
+      ✓ should fail with zero min. ETH accepted (54ms)
     Checking balances
       ✓ should have zero contract balance
-      ✓ should be able to send an amount of ETH to contract (131ms)
-      ✓ should set amount of ETH raised correctly (64ms)
+      ✓ should allow buyer to send an amount of ETH (53ms)
+      ✓ should allow buyer to deposit an amount of ETH (129ms)
+      ✓ should set the amount of ETH raised correctly
     Pausing contract
-      ✓ should pause contract and not allow sending ETH (151ms)
-      ✓ should know contract is in pause state (39ms)
-      ✓ should unpause contract and allow sending ETH (180ms)
+      ✓ should pause contract and not allow sending ETH (127ms)
+      ✓ should know contract is in pause state
+      ✓ should unpause contract and allow sending ETH (161ms)
       ✓ should know contract is in normal state
     Checking minimum ETH purchase
-      ✓ should not accept payments below minumum ETH amount (90ms)
+      ✓ should not accept payments below minumum ETH amount (65ms)
     Checking cap reached
-      ✓ should not accept payments if cap reached (155ms)
+      ✓ should not accept payments if cap reached (163ms)
     Checking has closed
-      ✓ should not have closed yet
+      ✓ should not have closed yet (42ms)
     Contract ownership
-      ✓ should have an owner (56ms)
-      ✓ changes owner after transfer (144ms)
-      ✓ changes owner back to original (138ms)
-      ✓ should prevent non-owners from transfering (59ms)
-      ✓ should guard ownership against stuck state (69ms)
-      ✓ should prevent non-owners from renouncement (62ms)
-      ✓ loses owner after renouncement (144ms)
+      ✓ should have an owner
+      ✓ changes owner after transfer (109ms)
+      ✓ changes owner back to original (119ms)
+      ✓ should prevent non-owners from transfering (53ms)
+      ✓ should guard ownership against stuck state (58ms)
+      ✓ should prevent non-owners from renouncement (68ms)
+      ✓ loses owner after renouncement (125ms)
     Checking set methods
-      ✓ should not reset cap if same value as before (74ms)
-      ✓ should not reset bonus if same value as before (51ms)
+      ✓ should not reset cap if same value as before (42ms)
+      ✓ should not reset bonus if same value as before (46ms)
       ✓ should not reset minimum ETH amount if same value as before
 
-  26 passing (3s)
+  27 passing (4s)
 
   ## Ropsten Testnet: 
   * The smart contract is currently deployed on the Ropsten Testnet but yet to be Verified & Published.

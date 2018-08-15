@@ -47,6 +47,7 @@ contract Medici is Pausable {
     // TODO: Back this up with address[] array or mapped array address, deposit
     
     /// Log events
+    event ETHReceived(address indexed buyer, uint256 amount);
     event ETHTransfer(string message);
     event ResetCap(string message);
     event ResetBonus(string message);
@@ -81,10 +82,11 @@ contract Medici is Pausable {
     }
 
     /**
-    * @dev Fallback function for any ETH transaction.
+    * @dev Fallback function for any ETH send transaction.
     */
     function () external payable {
-        deposit();
+        // Log ETH received through fallback function.
+        emit ETHReceived(msg.sender, msg.value);
     }
 
     /**

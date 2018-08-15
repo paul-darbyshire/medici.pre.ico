@@ -124,14 +124,21 @@ contract('Medici', function ([owner, wallet, buyer, anyone]) {
       assert.isTrue(balance.equals(ether(0)));
     });
 
-    it('should be able to send an amount of ETH to contract', async function () {
-      const pre = await ethGetBalance(wallet);
+    it('should allow buyer to send an amount of ETH', async function () {
+      const pre = await ethGetBalance(medici.address);
       await ethSendTransaction({ from: buyer, to: medici.address, value: amount, gas: 1000000 });
+      const post = await ethGetBalance(medici.address);
+      assert.isTrue(pre.plus(amount).equals(post));
+    });
+
+    it('should allow buyer to deposit an amount of ETH', async function () {
+      const pre = await ethGetBalance(wallet);
+      await medici.deposit({ from: buyer, value: amount, gas: 1000000 });
       const post = await ethGetBalance(wallet);
       assert.isTrue(pre.plus(amount).equals(post));
     });
 
-    it('should set amount of ETH raised correctly', async function () {
+    it('should set the amount of ETH raised correctly', async function () {
       const ethRaised = await medici.ETHRaised();
       assert.isTrue(ethRaised.equals(amount));
     });
@@ -140,7 +147,7 @@ contract('Medici', function ([owner, wallet, buyer, anyone]) {
   describe('Pausing contract', function () {
     it('should pause contract and not allow sending ETH', async function () {
       await medici.pause();
-      await ethSendTransaction({ from: buyer, to: medici.address, value: amount, gas: 1000000 }).should.not.be.fulfilled;
+      await medici.deposit({ from: buyer, value: amount, gas: 1000000 }).should.not.be.fulfilled;
     });
 
     it('should know contract is in pause state', async function () {
@@ -150,7 +157,7 @@ contract('Medici', function ([owner, wallet, buyer, anyone]) {
 
     it('should unpause contract and allow sending ETH', async function () {
       await medici.unpause();
-      await ethSendTransaction({ from: buyer, to: medici.address, value: amount, gas: 1000000 }).should.be.fulfilled;
+      await medici.deposit({ from: buyer, value: amount, gas: 1000000 }).should.be.fulfilled;
     });
 
     it('should know contract is in normal state', async function () {
@@ -162,7 +169,7 @@ contract('Medici', function ([owner, wallet, buyer, anyone]) {
   describe('Checking minimum ETH purchase', function () {
     it('should not accept payments below minumum ETH amount', async function () {
       const pre = await ethGetBalance(wallet);
-      await ethSendTransaction({ from: buyer, to: medici.address, value: lessThanMin, gas: 1000000 }).should.not.be.fulfilled;
+      await medici.deposit({ from: buyer, value: lessThanMin, gas: 1000000 }).should.not.be.fulfilled;
       const post = await ethGetBalance(wallet);
       assert.isTrue(pre.equals(post));
     });
@@ -170,8 +177,8 @@ contract('Medici', function ([owner, wallet, buyer, anyone]) {
 
   describe('Checking cap reached', function () {
     it('should not accept payments if cap reached', async function () {
-      await ethSendTransaction({ from: buyer, to: medici.address, value: cap, gas: 1000000 }).should.be.fulfilled;
-      await ethSendTransaction({ from: buyer, to: medici.address, value: amount, gas: 1000000 }).should.not.be.fulfilled;
+      await medici.deposit({ from: buyer, value: cap, gas: 1000000 }).should.be.fulfilled;
+      await medici.deposit({ from: buyer, value: amount, gas: 1000000 }).should.not.be.fulfilled;
     });
   });
 
